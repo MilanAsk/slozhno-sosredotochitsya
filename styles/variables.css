@@ -1,4 +1,16 @@
 /*
+
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+:root {
+  --main-font: 'IBM Plex mono';
+  --main-bg-color: rgba(0, 0, 40, 1);
+  --title-decor: rgba(255, 0, 112, 1);
+  --text-color: rgba(241, 178, 206, 1);
+  --text-size: 18px;
+  --title-weight: 700;
+  --text-weight: 400;
+  --text-height: 23.4px;
+}

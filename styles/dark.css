@@ -3,10 +3,414 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+.page.theme_dark :root {
+  /* Дублируем переменные для тёмной темы */
+  --main-font: 'IBM Plex mono';
+  --main-bg-color: rgba(0, 0, 40, 1);
+  --title-decor: rgba(255, 0, 112, 1);
+  --text-color: rgba(241, 178, 206, 1);
+  --text-size: 18px;
+  --title-weight: 700;
+  --text-weight: 400;
+  --text-height: 23.4px;
+}
 
+/* Остальные стили */
 .page.theme_dark {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  background-image: url(/images/cover-image-dark.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-size: var(--text-size);
+  font-family: var(--main-font);
+  font-weight: var(--text-weight);
+}
+
+h1,
+h2,
+h3 {
+  font-size: var(--text-size);
+  font-weight: var(--title-weight);
+}
+
+h4 {
+  font-weight: var(--text-weight);
+}
+
+.header {
+  display: inline-block;
+  margin: 10px 10px 40px 10px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .header {
+    margin: 20px 20px 60px 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    width: 984px;
+    height: 728px;
+  }
+}
+
+/* .header::after {
+  content: '';
+  background-image: url(/images/cover-image-dark.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+} */
+
+.inscription {
+  color: var(--title-decor);
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 39px;
+}
+
+@media (min-width: 768px) {
+  .inscription {
+    margin-bottom: 146px;
+  }
+}
+
+.inscription::after {
+  content: url(/images/Ellipse\ 4.png);
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--title-decor);
+  border-right: 1px solid var(--title-decor);
+  margin-left: 5px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  color: var(--title-decor);
+  font-size: var(--text-size);
+  line-height: 18px;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--title-decor);
+  pointer-events: none;
+}
+
+@media (min-width: 1024px) {
+  .header-menu {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-left: 397px;
+  }
+  .header__theme-menu-list {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .inscription {
+    margin: 0;
+  }
+}
+
+.header-title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 95.7px;
+  color: rgba(219, 0, 255, 1);
+  text-shadow: 5px 5px rgba(255, 0, 112, 1);
+  margin-top: 65px;
+  margin-bottom: 55px;
+}
+
+@media (min-width: 768px) {
+  .header-title {
+    margin-top: 173px;
+    margin-bottom: 162px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-title {
+    margin-bottom: 114px;
+    margin-top: 273px;
+  }
+}
+
+.header-text {
+  background-color: var(--title-decor);
+  color: var(--main-bg-color);
+  font-size: var(--text-size);
+  line-height: var(--text-height);
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 31px;
+}
+
+@media (min-width: 768px) {
+  .header-text {
+    margin-left: 50%;
+    padding-right: 10px;
+    margin-bottom: 138px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-text {
+    padding: 0;
+    margin-left: 493px;
+  }
+}
+
+.only-decor {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+}
+
+.only-decor::after {
+  content: '';
+  border-left: 1px solid var(--title-decor);
+  border-bottom: 1px solid var(--title-decor);
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+}
+
+/* @media (min-width: 1024px) {
+  .only-decor {
+    margin-bottom: 20px;
+  }
+} */
+
+main {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: grid;
+  gap: 50px;
+}
+
+@media (min-width: 768px) {
+  main {
+    gap: 80px;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .section {
+    flex-direction: row;
+  }
+
+  .section-column {
+    flex-direction: column;
+  }
+}
+
+.section-title {
+  color: var(--title-decor);
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    width: 236px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-title {
+    width: 315px;
+  }
+}
+
+.section-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .section-card {
+    width: 472px;
+    max-height: 100%;
+  }
+  .section-card-max-width {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-card-max-width {
+    display: flex;
+    flex-direction: row;
+  }
+  .section-card-text-triple {
+    width: 315px;
+  }
+}
+
+.section-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 1024px) {
+  .section-card {
+    width: 100%;
+  }
+}
+
+.section-subtitle {
+  color: var(--main-bg-color);
+  background-color: var(--title-decor);
+}
+
+.section-text {
+  color: var(--text-color);
+  display: inline-block;
+}
+
+.text-link {
+  text-shadow: 2px 1px var(--title-decor);
+  text-decoration: none;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.link-not-underline {
+  border: none;
+  text-shadow: 2px 2px var(--title-decor);
+}
+
+.image-example {
+  display: grid;
+  gap: 10px;
+}
+
+.images {
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    'sun'
+    'ice'
+    'tape'
+    'books'
+    'street';
+}
+
+@media (min-width: 768px) {
+  .images {
+    gap: 20px;
+    grid-template-areas:
+      'sun sun ice'
+      'tape books ice'
+      'tape street street';
+  }
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  img {
+    height: 100%;
+  }
+}
+
+.sunset {
+  grid-area: sun;
+}
+
+.ice-cream {
+  grid-area: ice;
+}
+
+.tape {
+  grid-area: tape;
+}
+
+.books {
+  grid-area: books;
+}
+
+.street {
+  grid-area: street;
+}
+
+footer {
+  margin: 40px 10px 10px 10px;
+  max-width: 100vw;
+  display: grid;
+  height: 647px;
+}
+
+@media (min-width: 768px) {
+  footer {
+    margin: 60px 20px 20px 20px;
+    height: 984px;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer {
+    height: 728px;
+  }
+}
+
+.footer-title {
+  text-align: center;
+  text-shadow: 2px 2px var(--title-decor);
+  margin: 50% auto;
+}
+
+@media (min-width: 1024px) {
+  .footer-title {
+    margin: 299px auto;
+  }
+}
+
+.decor {
+  justify-self: end;
+}
+
+.decor::after {
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--title-decor);
+  border-right: 1px solid var(--title-decor);
 }
