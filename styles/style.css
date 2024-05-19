@@ -95,6 +95,7 @@ h4 {
 
 .inscription {
   color: var(--button-color);
+  visibility: var(--decor-visible);
   line-height: 25px;
   position: absolute;
   top: 10px;
@@ -373,6 +374,7 @@ img {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {

@@ -6,7 +6,7 @@
 
 .page.theme_light {
   /* Переменные светлой темы */
-  --main-bg-image: url(/images/cover-image-light.png);
+  --main-bg-image: url(../images/cover-image-light.png);
   --main-font: 'IBM Plex mono';
   --main-title-color: rgba(255, 194, 230, 1);
   --main-bg-color: rgba(255, 141, 203, 1);
@@ -15,19 +15,16 @@
   --text-color: rgba(53, 52, 48, 1);
   --button-color: rgba(53, 52, 48, 1);
   --button-outline: rgba(50, 49, 45, 0.4);
+  --decor-visible: hidden;
   --text-size: 18px;
   --title-weight: 700;
   --text-weight: 400;
   --text-height: 23.4px;
-
-  .inscription {
-    display: none;
-  }
 }
 
 @media (prefers-color-scheme: light) {
   .page {
-    --main-bg-image: url(/images/cover-image-light.png);
+    --main-bg-image: url(../images/cover-image-light.png);
     --main-font: 'IBM Plex mono';
     --main-title-color: rgba(255, 194, 230, 1);
     --main-bg-color: rgba(255, 141, 203, 1);
@@ -36,14 +33,11 @@
     --text-color: rgba(53, 52, 48, 1);
     --button-color: rgba(53, 52, 48, 1);
     --button-outline: rgba(50, 49, 45, 0.4);
+    --decor-visible: hidden;
     --text-size: 18px;
     --title-weight: 700;
     --text-weight: 400;
     --text-height: 23.4px;
-
-    .inscription {
-      display: none;
-    }
   }
 }
 /* Остальные стили */
