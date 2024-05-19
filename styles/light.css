@@ -14,6 +14,7 @@
   --subtitle-color: rgba(53, 52, 48, 1);
   --text-color: rgba(53, 52, 48, 1);
   --button-color: rgba(53, 52, 48, 1);
+  --button-outline: rgba(50, 49, 45, 0.4);
   --text-size: 18px;
   --title-weight: 700;
   --text-weight: 400;
@@ -34,10 +35,15 @@
     --subtitle-color: rgba(53, 52, 48, 1);
     --text-color: rgba(53, 52, 48, 1);
     --button-color: rgba(53, 52, 48, 1);
+    --button-outline: rgba(50, 49, 45, 0.4);
     --text-size: 18px;
     --title-weight: 700;
     --text-weight: 400;
     --text-height: 23.4px;
+
+    .inscription {
+      display: none;
+    }
   }
 }
 /* Остальные стили */
